@@ -53,7 +53,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="Overall Engagement"
+              title="Engagement by part"
               subheader="During 10 minutes"
               chartLabels={[
                 '01/01/2003',
@@ -69,24 +69,31 @@ export default function DashboardAppPage() {
                 // '11/01/2003',
               ]}
               chartData={[
-                // {
-                //   name: 'Team A',
-                //   type: 'column',
-                //   fill: 'solid',
-                //   data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22],
-                // },
                 {
-                  name: 'Disengaged',
+                  name: 'Face',
+                  type: 'line',
+                  fill: 'solid',
+                  // color:'red',
+                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22],
+                },
+                {
+                  name: 'Eye',
                   type: 'area',
                   fill: 'gradient',
                   data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27],
                 },
                 {
-                  name: 'Engaged',
-                  type: 'line',
-                  fill: 'solid',
+                  name: 'Upper body pose',
+                  type: 'area',
+                  fill: 'gradient',
                   data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36],
                 },
+              ]}
+              chartColors={[
+                theme.palette.warning.main,
+                // theme.palette.primary.main,
+                // theme.palette.info.main,
+                // theme.palette.error.main,
               ]}
             />
           </Grid>
@@ -108,22 +115,39 @@ export default function DashboardAppPage() {
               ]}
             />
           </Grid>
+          
 
           <Grid item xs={12} md={6} lg={8}>
-            <AppConversionRates
-              title="Conversion Rates"
-              subheader="(+43%) than last year"
+            <AppWebsiteVisits
+              title="Final Engagement"
+              subheader="During 10 minutes"
+              chartLabels={[
+                '01/01/2003',
+                '02/01/2003',
+                '03/01/2003',
+                '04/01/2003',
+                '05/01/2003',
+                '06/01/2003',
+                '07/01/2003',
+                '08/01/2003',
+                '09/01/2003',
+                '10/01/2003',
+                // '11/01/2003',
+              ]}
               chartData={[
-                { label: 'Italy', value: 400 },
-                { label: 'Japan', value: 430 },
-                { label: 'China', value: 448 },
-                { label: 'Canada', value: 470 },
-                { label: 'France', value: 540 },
-                { label: 'Germany', value: 580 },
-                { label: 'South Korea', value: 690 },
-                { label: 'Netherlands', value: 1100 },
-                { label: 'United States', value: 1200 },
-                { label: 'United Kingdom', value: 1380 },
+                
+                {
+                  name: 'Upper body pose',
+                  type: 'area',
+                  fill: 'gradient',
+                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36],
+                },
+              ]}
+              chartColors={[
+                theme.palette.warning.main,
+                // theme.palette.primary.main,
+                // theme.palette.info.main,
+                // theme.palette.error.main,
               ]}
             />
           </Grid>
