@@ -100,11 +100,11 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
-              title="By Feature"
+              title="Engagement levels"
               chartData={[
-                { label: 'Eye', value: 3344 },
-                { label: 'Facial', value: 2443 },
-                { label: 'Body', value: 4443 },
+                { label: 'Highly Engaged', value: 3344 },
+                { label: 'Normal', value: 2443 },
+                { label: 'Disengaged', value: 4443 },
                 // { label: 'Facial ', value: 5435 },
               ]}
               chartColors={[
@@ -137,7 +137,7 @@ export default function DashboardAppPage() {
               chartData={[
                 
                 {
-                  name: 'Upper body pose',
+                  // name: 'Upper body pose',
                   type: 'area',
                   fill: 'gradient',
                   data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36],
@@ -145,14 +145,14 @@ export default function DashboardAppPage() {
               ]}
               chartColors={[
                 theme.palette.warning.main,
-                // theme.palette.primary.main,
-                // theme.palette.info.main,
-                // theme.palette.error.main,
+                theme.palette.primary.main,
+                theme.palette.info.main,
+                theme.palette.error.main,
               ]}
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentSubject
               title="Current Subject"
               chartLabels={['English', 'History', 'Physics', 'Geography', 'Chinese', 'Math']}
@@ -163,7 +163,7 @@ export default function DashboardAppPage() {
               ]}
               chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
             />
-          </Grid>
+          </Grid> */}
 
           {/* <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate
