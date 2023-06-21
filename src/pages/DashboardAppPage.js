@@ -30,42 +30,46 @@ export default function DashboardAppPage() {
       </Helmet>
 
       <Container maxWidth="xl">
-        {/* <Typography variant="h4" sx={{ mb: 5 }}>
+      <Typography variant="h4" sx={{ mb: .3 }}>
           Hi, Welcome back
-        </Typography> */}
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 5 }}>
+          Please upload your video, Results will update within few hours
+        </Typography>
+        
+      
 
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Total Stundent Count" total={5} icon={'ant-design:user-outlined'} />
+          {/* <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary title="Total Stundent Count" total={6} icon={'ant-design:user-outlined'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Highly Engaged Students" total={4} color="info" icon={'ant-design:thunderbolt-filled'} />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} sm={6} md={3}>
+          {/* <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Normally Engaged Students" total={1} color="warning" icon={'ant-design:minus-circle-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Disengaged Students" total={1} color="error" icon={'ant-design:dislike-filled'} />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} md={6} lg={9}>
             <AppWebsiteVisits
               title="Engagement by part"
-              subheader="During 10 minutes"
+              subheader="During 40 minutes"
               chartLabels={[
-                '01/01/2003',
-                '02/01/2003',
-                '03/01/2003',
-                '04/01/2003',
-                '05/01/2003',
-                '06/01/2003',
-                '07/01/2003',
-                '08/01/2003',
-                '09/01/2003',
-                '10/01/2003',
+                '0',
+                '5',
+                '10',
+                '15',
+                '20',
+                '25',
+                '30',
+                '35',
+                '40',
                 // '11/01/2003',
               ]}
               chartData={[
@@ -74,19 +78,19 @@ export default function DashboardAppPage() {
                   type: 'line',
                   fill: 'solid',
                   // color:'red',
-                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22],
+                  data: [.37,.44,.23, .22, .27, .22,.13, .21,.11 ],
                 },
                 {
                   name: 'Eye',
                   type: 'area',
                   fill: 'gradient',
-                  data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27],
+                  data: [.44, .55, .41, .67, .22, .43, .21, .41, .56],
                 },
                 {
-                  name: 'Upper body pose',
+                  name: 'Body pose',
                   type: 'area',
                   fill: 'gradient',
-                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36],
+                  data: [.30, .25, .36, .30, .45, .35, .64, .52, .59],
                 },
               ]}
               chartColors={[
@@ -96,9 +100,37 @@ export default function DashboardAppPage() {
                 // theme.palette.error.main,
               ]}
             />
+          
           </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <AppTrafficBySite
+              title="Insights"
+              list={[
+                
+                
+                {
+                  name: 'Overall Score',
+                  value: 8.35,
+                  icon: <Iconify icon={'ant-design:thunderbolt-filled'} color="#1877F2" width={32} />,
+                },
+                {
+                  name: 'Total Student Count',
+                  value: 5,
+                  icon: <Iconify icon={'ant-design:user-outlined'} color="#DF3E30" width={32} />,
+                },
+             
+              ]}
+            />
+          </Grid>  
+          {/* <Grid item xs={12} sm={3} md={3}>
+            <AppWidgetSummary title="Total Stundent Count" total={6} icon={'ant-design:user-outlined'} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary title="Total Stundent Count" total={6} icon={'ant-design:user-outlined'} />
+          </Grid> */}
+          
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Engagement levels"
               chartData={[
@@ -114,43 +146,44 @@ export default function DashboardAppPage() {
                 theme.palette.error.main,
               ]}
             />
-          </Grid>
+          </Grid> */}
           
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} md={6} lg={9}>
             <AppWebsiteVisits
-              title="Final Engagement"
-              subheader="During 10 minutes"
+              title="Overall score"
+              subheader="During 40 minutes"
               chartLabels={[
-                '01/01/2003',
-                '02/01/2003',
-                '03/01/2003',
-                '04/01/2003',
-                '05/01/2003',
-                '06/01/2003',
-                '07/01/2003',
-                '08/01/2003',
-                '09/01/2003',
-                '10/01/2003',
+                '0',
+                '5',
+                '10',
+                '15',
+                '20',
+                '25',
+                '30',
+                '35',
+                '40',
                 // '11/01/2003',
               ]}
               chartData={[
-                
                 {
-                  // name: 'Upper body pose',
+                  name: 'Face',
                   type: 'area',
                   fill: 'gradient',
-                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36],
+                  // color:'red',
+                  data: [.44, .55, .48, .67, .40, .50, .30, .41, .35],
                 },
+           
               ]}
               chartColors={[
                 theme.palette.warning.main,
-                theme.palette.primary.main,
-                theme.palette.info.main,
-                theme.palette.error.main,
+                // theme.palette.primary.main,
+                // theme.palette.info.main,
+                // theme.palette.error.main,
               ]}
             />
           </Grid>
+       
 
           {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentSubject
